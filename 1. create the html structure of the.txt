@@ -1,0 +1,27 @@
+1. create the html structure of the app,
+2. create useState variables for result and calc.
+3. create array of operators
+4. create a function that passes a value argument, 
+whenever the button is clicked, ipasses the value string on onClick function to the update(value) function.
+5. create an if statement inside the update value,
+where in when 
+* the last value is an operator, and the calc value is null, 
+* or last value is an operator and the last value is also an operator, just return and not do anything.
+
+6. create an if statement that evaluate the value of calc 
+if(!ops.includes(value)){
+	setResult(eval(calc + value).toString());
+} 
+7. create calculate funtion for = sign, 
+const calculat = ()=>{
+	setCalc(eval(calc).toString());
+}
+8. create delete funtion which deletes the last
+
+const delete = () =>{
+	if(calc === ''){
+		return;
+	}
+	const value = calc.slice(0, -1);
+	setCalc(value);
+}
